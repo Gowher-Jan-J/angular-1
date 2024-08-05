@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col-12">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>sr.no</th>
+                    <th>id</th>
+                    <th>name</th>
+                    <th>email</th>
+                    <th>password</th>
+                    <!-- <th>created</th>
+                    <th>updated</th>
+                    <th>deleted</th> -->
+
+                </tr>
+            </thead>
+            <tbody>
+                @for (item of userList; track item.id) {
+                <tr>
+                    <td>{{$index + 1}}</td>
+                    <td>{{item.id}}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.EmailId}}</td>
+                    <td>{{item.Password}}</td>
+                    <!-- <td>{{item.createdAt}}</td>
+                    <td>{{item.updatedAt}}</td>
+                    <td>{{item.deletedAt}}</td> -->
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<router-outlet />
+
